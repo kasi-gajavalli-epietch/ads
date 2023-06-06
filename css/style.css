@@ -1267,7 +1267,7 @@ textarea.form-control {
 /* ---------------------------- 
  =why choose us
  ------------------------------*/
- .wcu-card {
+.wcu-card {
   border: none;
   box-shadow: var(--shadow);
   margin-top: 20px;
@@ -1301,7 +1301,7 @@ textarea.form-control {
 /* ---------------------------- 
  =timeline
  ------------------------------*/
- .timeline {
+.timeline {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -1314,8 +1314,6 @@ textarea.form-control {
   margin: 10px;
   text-align: center;
 }
-
-
 
 .timeline-year {
   position: relative;
@@ -1336,7 +1334,6 @@ textarea.form-control {
   width: 80px;
   height: 80px;
 }
-
 
 .timeline-content {
   margin-top: 10px;
@@ -1390,8 +1387,128 @@ textarea.form-control {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .timeline-item {
     margin: 20px 0;
+  }
+}
+
+/* ---------------------------- 
+ =nos dirigeants
+ ------------------------------*/
+
+.diri-card {
+  width: 340px;
+  margin: 10px;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.3s;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  border-radius: 10px;
+  height: 600px !important;
+  flex-basis: calc(33.33% - 20px);
+}
+.diri-card-fullname,
+.diri-card.is-active .diri-card-jobtitle {
+  left: 86px;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.diri-card.is-active .diri-card-fullname {
+  bottom: 18px;
+  font-size: 19px;
+}
+
+.diri-card-header {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  height: 200px;
+  flex-shrink: 0;
+  width: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.diri-card-avatar {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  -o-object-position: center;
+  object-position: center;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-64px);
+  transform: translateX(-50%) translateY(-64px);
+}
+
+.diri-card-fullname {
+  position: absolute;
+  bottom: 0;
+  font-size: 22px;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-transform: translateY(-10px) translateX(-50%);
+  transform: translateY(-10px) translateX(-50%);
+  left: 50%;
+  color: var(--WHITE);
+  font-weight: 300;
+}
+
+.diri-card-main {
+  position: relative;
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+.diri-card-subtitle {
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.diri-card-content {
+  padding: 20px;
+  background-color: var(--white);
+  height: 400px !important;
+  overflow: scroll;
+}
+
+.diri-card-container {
+  display: flex;
+  --bs-gutter-x: 15px;
+  max-width: 1140px;
+}
+
+.diri-cards {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .diri-card-container {
+    display: block; /* Displayed in responsive mode */
+    align-items: center;
+  }
+  .diri-card {
+    border-radius: 10px;
+    height: 600px !important;
+    align-items: center;
+    margin-left: 0px !important;
+    width: 250px;
+  }
+
+  .diri-cards {
+    display: block;
   }
 }
