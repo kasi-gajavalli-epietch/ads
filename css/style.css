@@ -348,7 +348,7 @@ textarea.form-control {
 /* -----------------------
  13. =video modal 
  ------------------------ */
-.video-modal .btn-close {
+/*.video-modal .btn-close {
   height: 35px;
   width: 35px;
   background-image: none;
@@ -364,7 +364,7 @@ textarea.form-control {
 }
 .video-modal .modal-content {
   border: 0;
-}
+}*/
 /* ---------------------- 
  14. =pagination 
  ------------------------*/
@@ -567,11 +567,14 @@ textarea.form-control {
 .theme-colors .color-5 {
   background-color: hsl(164, 74%, 61%);
 }
+/*.theme-colors .color-6 {
+  background-color: hsl(207.18, 74%, 61%);
+}*/
 /* -------------------- 
  19. =header  
  --------------------------*/
- .header{
-    border-bottom: 1px solid var(--border-color-2);
+.header {
+  border-bottom: 1px solid var(--border-color-2);
 }
 .header-logo a {
   font-size: 26px;
@@ -1138,9 +1141,7 @@ textarea.form-control {
   height: 680px !important;
   z-index: 1;
   overflow: hidden;
-  /*transition: 0.5s;*/
 }
-
 
 .card::before {
   content: "";
@@ -1150,13 +1151,9 @@ textarea.form-control {
   background: var(--main-color);
   width: 100%;
   height: 100%;
-  /*transition: 0.5s;*/
   z-index: -1;
 }
-/*.card:hover::before {
-  left: 0%;
-  color: white;
-}*/
+
 .container-fluid {
   background-position: center;
   background-size: cover;
@@ -1181,9 +1178,6 @@ textarea.form-control {
 .subtitleServices {
   color: var(--main-color);
 }
-.subtitleServices:hover {
-  color: #fff;
-}
 
 @media (max-width: 767px) {
   .card {
@@ -1191,29 +1185,26 @@ textarea.form-control {
   }
 }
 .responsive-div {
-    height: 20px;
-    display: none; /* Initially hidden */
+  height: 20px;
+  display: none; /* Initially hidden */
+}
+
+@media (max-width: 767px) {
+  .responsive-div {
+    display: block; /* Displayed in responsive mode */
   }
-  
-  @media (max-width: 767px) {
-    .responsive-div {
-      display: block; /* Displayed in responsive mode */
-    }
-  }
-  
+}
 
 /* ---------------------------- 
  27. =products
  ------------------------------*/
- .productCards {
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
+.productCards {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
 
- 
 /* ---------------------------- 
 28. =clients
  ------------------------------*/
@@ -1226,14 +1217,13 @@ textarea.form-control {
   overflow: hidden;
   position: relative;
   padding: 50px;
-  
+
   --bs-gutter-x: 15px;
   max-width: 1140px;
 }
 
 .slider::before,
 .slider::after {
-  
   content: "";
   height: 200px;
   position: absolute;
@@ -1274,25 +1264,134 @@ textarea.form-control {
   }
 }
 
-.horizontal-list {
-    display: flex;
-    list-style-type: none;
-    padding-left: 0;
+/* ---------------------------- 
+ =why choose us
+ ------------------------------*/
+ .wcu-card {
+  border: none;
+  box-shadow: var(--shadow);
+  margin-top: 20px;
+  padding: 10px;
+  opacity: 0; /* Start with opacity 0 */
+  transition: opacity 0.5s ease; /* Add a smooth transition effect */
+}
+
+.show {
+  opacity: 1; /* Show the card by changing opacity to 1 */
+}
+
+/* Other CSS styles */
+.point-list {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.bullet {
+  color: var(--main-color);
+  margin-right: 5px;
+}
+
+@media (max-width: 767px) {
+  .col-md-6 {
+    flex-basis: 100%;
+    max-width: 100%;
   }
-  
-  .horizontal-list li {
-    display: flex;
+}
+
+/* ---------------------------- 
+ =timeline
+ ------------------------------*/
+ .timeline {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.timeline-item {
+  display: inline-block;
+  position: relative;
+  margin: 10px;
+  text-align: center;
+}
+
+
+
+.timeline-year {
+  position: relative;
+  z-index: 1;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--WHITE);
+  font-weight: 500;
+  background-color: var(--main-color);
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  width: 80px;
+  height: 80px;
+}
+
+
+.timeline-content {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.timeline-title {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.timeline-description {
+  font-size: 14px;
+}
+
+.timeline-connector {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  border-left: 2px solid #dd4949;
+  transform: translateX(-50%);
+}
+
+.timeline-item:first-child .timeline-connector {
+  display: none;
+}
+
+.timeline-item:last-child .timeline-connector {
+  height: 50%;
+}
+
+.timeline-item:hover .timeline-year {
+  animation: shine 1s infinite;
+}
+
+@keyframes shine {
+  0% {
+    box-shadow: 0 0 0 0 var(--main-color);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(249, 213, 110, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(249, 213, 110, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
     align-items: center;
-    margin-right: 20px;
   }
   
-  .horizontal-list li:before {
-    content: "\2714";
-    margin-right: 5px;
+  .timeline-item {
+    margin: 20px 0;
   }
-  
-  .horizontal-list li p {
-    font-weight: bold;
-    font-size: 18px;
-  }
-  
+}
