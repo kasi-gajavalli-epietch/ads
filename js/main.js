@@ -250,6 +250,7 @@ themeGlassEffect();
 /* why choose */
 
 const bannerText = document.getElementById("banner-text");
+const cards = bannerText.querySelectorAll(".wcu-card");
 
 // Options for the Intersection Observer
 const options = {
@@ -268,26 +269,12 @@ function handleIntersect(entries, observer) {
     }
   });
 }
+
+// Create the Intersection Observer
 const observer = new IntersectionObserver(handleIntersect, options);
 
-/* diri cards */
-
-const buttons = document.querySelectorAll(".diri-card-buttons button");
-const sections = document.querySelectorAll(".diri-card-section");
-const card = document.querySelector(".diri-card");
-const handleButtonClick = (e) => {
-  const targetSection = e.target.getAttribute("data-section");
-  const section = document.querySelector(targetSection);
-  targetSection !== "#about"
-    ? card.classList.add("is-active")
-    : card.classList.remove("is-active");
-  card.setAttribute("data-state", targetSection);
-  sections.forEach((s) => s.classList.remove("is-active"));
-  buttons.forEach((b) => b.classList.remove("is-active"));
-  e.target.classList.add("is-active");
-  section.classList.add("is-active");
-};
-
-buttons.forEach((btn) => {
-  btn.addEventListener("click", handleButtonClick);
+// Observe each card
+cards.forEach((card) => {
+  observer.observe(card);
 });
+
