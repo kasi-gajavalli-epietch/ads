@@ -1,4 +1,4 @@
-const buttons = document.querySelectorAll(".diri-card-buttons button");
+/*const buttons = document.querySelectorAll(".diri-card-buttons button");
 
 const sections = document.querySelectorAll(".diri-card-section");
 
@@ -26,8 +26,7 @@ const handleButtonClick = (e) => {
 
 buttons.forEach((btn) => {
   btn.addEventListener("click", handleButtonClick);
-});
-
+});*/
 //slide show
 
 /*let slideIndex = 0;
@@ -49,3 +48,4 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }*/
+

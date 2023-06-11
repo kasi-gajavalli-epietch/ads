@@ -6,6 +6,13 @@
     max-width: 100%;
     --bs-gutter-x: 30px;
   }
+  .diri-card-container{
+    max-width: 100%;
+    --bs-gutter-x: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
 }
 
 @media(max-width: 991px){
@@ -155,7 +162,7 @@
 }
 
 @media(max-width: 767px){
-  .container{
+  .container, .diri-card-container{
     --bs-gutter-x: 15px;
   }
   .box{
