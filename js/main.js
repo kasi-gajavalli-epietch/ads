@@ -278,3 +278,4 @@ cards.forEach((card) => {
   observer.observe(card);
 });
 
+

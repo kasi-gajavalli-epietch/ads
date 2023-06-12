@@ -189,37 +189,22 @@
             <div class="col-md-6">
               <div class="contact-form box">
                 <h2 class="form-title text-center">Laisser un message</h2>
-                <form action="">
+                <form action="send_email.php" method="POST">
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Nom" />
+                    <input type="text" name="name" class="form-control" placeholder="Nom" required>
                   </div>
                   <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Email"
-                    />
+                    <input type="email" name="email" class="form-control" placeholder="Email" required>
                   </div>
                   <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Portable"
-                    />
+                    <input type="tel" name="phone" class="form-control" placeholder="Portable" required>
                   </div>
                   <div class="form-group">
-                    <textarea
-                      class="form-control"
-                      placeholder="Message"
-                    ></textarea>
+                    <textarea name="message" class="form-control" placeholder="Message" required></textarea>
                   </div>
-                  <button
-                    type="submit"
-                    class="btn btn-block btn-theme btn-form"
-                  >
-                    envoyez
-                  </button>
+                  <button type="submit" class="btn btn-block btn-theme btn-form">envoyez</button>
                 </form>
+                
               </div>
             </div>
           </div>
@@ -378,6 +363,7 @@
     </div>
     <!-- style switcher end -->
 
+    <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
