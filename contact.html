@@ -83,7 +83,9 @@
                   <a href="about.html">qui somme nous?</a>
                 </li>
 
-                <li class="menu-item"><a href="join.html">Nous rejoindre</a></li>
+                <li class="menu-item">
+                  <a href="join.html">Nous rejoindre</a>
+                </li>
 
                 <li class="menu-item"><a href="blog.html">blog</a></li>
 
@@ -189,28 +191,63 @@
             <div class="col-md-6">
               <div class="contact-form box">
                 <h2 class="form-title text-center">Laisser un message</h2>
-                <form action="./send_email.php" method="POST">
+                <form action="enquiry.php" id="contactform" method="post">
                   <div class="form-group">
-                    <input type="text" name="name" class="form-control" placeholder="Nom" required>
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      placeholder="Nom"
+                      required
+                    />
                   </div>
                   <div class="form-group">
-                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control"
+                      placeholder="Email"
+                      required
+                    />
                   </div>
                   <div class="form-group">
-                    <input type="tel" name="phone" class="form-control" placeholder="Portable" required>
+                    <input
+                      name="phone"
+                      type="number"
+                      class="form-control"
+                      placeholder="Portable"
+                      required
+                    />
                   </div>
                   <div class="form-group">
-                    <textarea name="message" class="form-control" placeholder="Message" required></textarea>
+                    <textarea
+                      name="msg"
+                      class="form-control"
+                      placeholder="Message"
+                      id="textarea-sw"
+                      required
+                    ></textarea>
                   </div>
-                  <button type="submit" class="btn btn-block btn-theme btn-form">envoyez</button>
+                  <button
+                    type="submit"
+                    name="submit"
+                    value="Submit"
+                    class="btn btn-block btn-theme btn-form"
+                  >
+                    envoyez
+                  </button>
                 </form>
-                
               </div>
             </div>
           </div>
         </div>
       </section>
       <!-- contact section end -->
+
+      <!--Scroll To Top-->
+      <button onclick="scrollToTop()" id="topButton" title="Go to top">
+        &#8679;
+      </button>
 
       <!-- footer start -->
       <footer class="footer">
@@ -238,7 +275,9 @@
                   <h3>Légal</h3>
                   <ul>
                     <li><a href="mention.html">Mention Légal</a></li>
-                    <li><a href="general.html">Condition générale de vente</a></li>
+                    <li>
+                      <a href="general.html">Condition générale de vente</a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -253,12 +292,14 @@
                       >
                     </li>
                     <li>
-                      <a href="https://www.youtube.com/channel/UCZWVRElRzDkG69NXvAuh8vg"
+                      <a
+                        href="https://www.youtube.com/channel/UCZWVRElRzDkG69NXvAuh8vg"
                         ><i class="fab fa-youtube social-icon"></i> youtube</a
                       >
                     </li>
                     <li>
-                      <a href="https://www.linkedin.com/company/alchimiedatasolutions/"
+                      <a
+                        href="https://www.linkedin.com/company/alchimiedatasolutions/"
                         ><i class="fab fa-linkedin social-icon"></i> linkedin</a
                       >
                     </li>
@@ -363,7 +404,7 @@
     </div>
     <!-- style switcher end -->
 
-    <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>

@@ -250,7 +250,7 @@ themeGlassEffect();
 /* why choose */
 
 const bannerText = document.getElementById("banner-text");
-const cards = bannerText.querySelector(".wcu-card");
+const cards = document.querySelectorAll(".wcu-card");
 
 // Options for the Intersection Observer
 const options = {
@@ -277,3 +277,5 @@ const observer = new IntersectionObserver(handleIntersect, options);
 cards.forEach((card) => {
   observer.observe(card);
 });
+
+

@@ -1,7 +1,7 @@
 <?php
  
 if(isset($_POST['email'])) {
-$email_to = "digitalphymedia@gmail.com";
+$email_to = "kasi.gajavalli@gmail.com";
 $email_subject = "Enquiry Form";
 function died($error) {
         echo "We are very sorry, but there were error(s) found with the form you submitted. "; 
