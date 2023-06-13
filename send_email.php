@@ -1,4 +1,4 @@
-<?php
+<!--?php
  
 if(isset($_POST['email'])) {
 $email_to = "digitalphymedia@gmail.com";
@@ -30,12 +30,39 @@ $headers = 'From: '.$email_from."\r\n".
 @mail($email_to, $email_subject, $email_message, $headers); 
 header('Location: thank-you.html');
 exit(); 
-?>
- 
+?-->
+
 Thank you for contacting us. We will be in touch with you very soon.
 
-<?php
+<!--?php
  
 }
  
+?-->
+
+
+<?php
+// Get data from form 
+$name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
+
+$to = "yourEmail@gmail.com";
+$subject = "This is the subject line";
+
+// The following text will be sent
+// Name = user entered name
+// Email = user entered email
+// Message = user entered message
+$txt = "Name = " . $name . "\r\n  Email = "
+    . $email . "\r\n Message =" . $message;
+
+$headers = "From: noreply@demosite.com" . "\r\n" .
+    "CC: somebodyelse@example.com";
+if ($email != NULL) {
+    mail($to, $subject, $txt, $headers);
+}
+
+// Redirect to
+header("Location:last.html");
 ?>
