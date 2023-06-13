@@ -11,13 +11,12 @@ if (isset($_POST['email'])) {
         echo "Please go back and fix these errors.<br /><br />";
         die();
     }
-    if (!isset($_POST['name']) ||  !isset($_POST['phone']) || !isset($_POST['email']) || !isset($_POST['service']) || !isset($_POST['msg'])) {
+    if (!isset($_POST['name']) ||  !isset($_POST['phone']) || !isset($_POST['email']) || !isset($_POST['msg'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');
     }
     $name = $_POST['name'];
     $telephone = $_POST['phone'];
     $email_from = $_POST['email'];
-    $service = $_POST['service'];
     $message = $_POST['msg'];
     $email_message = "Form details below.\n\n";
     function clean_string($string)
@@ -28,7 +27,6 @@ if (isset($_POST['email'])) {
     $email_message .= "Name: " . clean_string($name) . "\n";
     $email_message .= "Telephone: " . clean_string($telephone) . "\n";
     $email_message .= "Email: " . clean_string($email_from) . "\n";
-    $email_message .= "Looking For: " . clean_string($service) . "\n";
     $email_message .= "Message: " . clean_string($message) . "\n";
     $headers = 'From: ' . $email_from . "\r\n" .
         'Reply-To: ' . $email_from . "\r\n" .
