@@ -83,9 +83,26 @@
                   <a href="about.html">qui somme nous?</a>
                 </li>
 
-                <li class="menu-item"><a href="join.html">Nous rejoindre</a></li>
+                <li class="menu-item">
+                  <a href="join.html">Nous rejoindre</a>
+                </li>
 
                 <li class="menu-item"><a href="blog.html">blog</a></li>
+
+                <li class="menu-item form-check form-switch">
+                  <input
+                    class="form-check-input js-dark-mode"
+                    type="checkbox"
+                    role="switch"
+                    id="dark-mode"
+                  />
+                  <label class="form-check-label" for="dark-mode"
+                    ><i
+                      class="fas fa-moon"
+                      style="color: var(--main-color)"
+                    ></i>
+                  </label>
+                </li>
 
                 <!--<li class="menu-item">
                   <div class="main-red-button-hover">
@@ -359,17 +376,18 @@
                 </p>
               </div>
               <!-- video header end -->
-              <nav class="course-tabs">
+              <nav class="course-tabs text-center">
                 <div class="nav nav-tabs border-0" id="nav-tab" role="tablist">
                   <a
                     class="nav-link active"
                     id="course-curriculum-tab"
-                    href="#course-curriculum"
+                    href="https://www.youtube.com/channel/UCPUIM2CBWWKWj-c7M3NUBng"
                     role="tab"
                     aria-controls="course-curriculum"
                     aria-selected="true"
+                    target="_blank"
                   >
-                    Demonstration
+                    Accéder à la chaîne
                   </a>
                 </div>
               </nav>
@@ -381,10 +399,11 @@
                 <iframe
                   width="100%"
                   height="340px"
-                  src="https://www.youtube.com/embed/xouYBsvR_Bs"
+                  src="https://www.youtube.com/embed/Sy9ZFAydaaw"
                   frameborder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
+                  target="_blank"
                 ></iframe>
               </div>
               <!-- video sidebar end -->
@@ -408,16 +427,14 @@
             <div class="col-md-6 col-lg-6">
               <!-- video sidebar start -->
               <div class="course-sidebar box" style="height: 400px">
-                <div class="img-box position-relative">
-                  <iframe
-                    width="100%"
-                    height="340px"
-                    src="https://www.youtube.com/embed/IfyniIKoOlQ"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
+                <iframe
+                  width="100%"
+                  height="340px"
+                  src="https://www.youtube.com/embed/IfyniIKoOlQ"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
               </div>
               <!-- video sidebar end -->
               <div class="card-body">
@@ -435,16 +452,14 @@
             <div class="col-md-6 col-lg-6">
               <!-- video sidebar start -->
               <div class="course-sidebar box" style="height: 400px">
-                <div class="img-box position-relative">
-                  <iframe
-                    width="100%"
-                    height="340px"
-                    src="https://www.youtube.com/embed/zNOOFB8qyEA"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
+                <iframe
+                  width="100%"
+                  height="340px"
+                  src="https://www.youtube.com/embed/zNOOFB8qyEA"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
               </div>
               <!-- video sidebar end -->
               <div class="card-body">
@@ -512,8 +527,17 @@
                 <div class="footer-item">
                   <h3>Légal</h3>
                   <ul>
-                    <li><a href="https://alchimie-data-solutions.odoo.com/mention-legal">Mention Légal</a></li>
-                    <li><a href="https://alchimie-data-solutions.odoo.com/terms">Condition générale de vente</a></li>
+                    <li>
+                      <a
+                        href="https://alchimie-data-solutions.odoo.com/mention-legal"
+                        >Mention Légal</a
+                      >
+                    </li>
+                    <li>
+                      <a href="https://alchimie-data-solutions.odoo.com/terms"
+                        >Condition générale de vente</a
+                      >
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -528,12 +552,14 @@
                       >
                     </li>
                     <li>
-                      <a href="https://www.youtube.com/channel/UCZWVRElRzDkG69NXvAuh8vg"
+                      <a
+                        href="https://www.youtube.com/channel/UCZWVRElRzDkG69NXvAuh8vg"
                         ><i class="fab fa-youtube social-icon"></i> youtube</a
                       >
                     </li>
                     <li>
-                      <a href="https://www.linkedin.com/company/alchimiedatasolutions/"
+                      <a
+                        href="https://www.linkedin.com/company/alchimiedatasolutions/"
                         ><i class="fab fa-linkedin social-icon"></i> linkedin</a
                       >
                     </li>
@@ -575,51 +601,19 @@
     <!-- main wrapper end -->
 
     <!-- style switcher start -->
-    <div class="style-switcher js-style-switcher">
+    <div class="style-switcher js-style-switcher" style="visibility: hidden">
       <div class="style-switcher-toggler js-style-switcher-toggler">
         <i class="fas fa-cog"></i>
       </div>
-      <h3>Personnalisez interface</h3>
       <div class="style-switcher-item">
-        <p class="mb-2">Couleurs du thème</p>
+        <p class="mb-2"></p>
         <!-- theme colors -->
         <div class="theme-colors js-theme-colors">
-          <button
-            type="button"
-            data-js-theme-color="color-1"
-            class="js-theme-color-item color-1"
-          ></button>
           <button
             type="button"
             data-js-theme-color="color-2"
             class="js-theme-color-item color-2"
           ></button>
-          <button
-            type="button"
-            data-js-theme-color="color-3"
-            class="js-theme-color-item color-3"
-          ></button>
-          <button
-            type="button"
-            data-js-theme-color="color-4"
-            class="js-theme-color-item color-4"
-          ></button>
-          <button
-            type="button"
-            data-js-theme-color="color-5"
-            class="js-theme-color-item color-5"
-          ></button>
-        </div>
-      </div>
-      <div class="style-switcher-item">
-        <div class="form-check form-switch">
-          <input
-            class="form-check-input js-dark-mode"
-            type="checkbox"
-            role="switch"
-            id="dark-mode"
-          />
-          <label class="form-check-label" for="dark-mode">Dark Mode</label>
         </div>
       </div>
       <div class="style-switcher-item">

@@ -89,6 +89,18 @@
                 </li>
 
                 <li class="menu-item"><a href="blog.html">blog</a></li>
+                
+
+                <li class="menu-item form-check form-switch">
+                  <input
+                    class="form-check-input js-dark-mode"
+                    type="checkbox"
+                    role="switch"
+                    id="dark-mode"
+                  />
+                  <label class="form-check-label" for="dark-mode"><i class="fas fa-moon" style="color:var(--main-color);"></i>
+                  </label>
+                </li>
 
                 <!--<li class="menu-item">
                   <div class="main-red-button-hover">
@@ -592,51 +604,20 @@
     <!-- main wrapper end -->
 
     <!-- style switcher start -->
-    <div class="style-switcher js-style-switcher">
+    <div class="style-switcher js-style-switcher" style="visibility: hidden;">
       <div class="style-switcher-toggler js-style-switcher-toggler">
         <i class="fas fa-cog"></i>
       </div>
-      <h3>Personnalisez interface</h3>
       <div class="style-switcher-item">
-        <p class="mb-2">Couleurs du thème</p>
+        <p class="mb-2"></p>
         <!-- theme colors -->
         <div class="theme-colors js-theme-colors">
-          <button
-            type="button"
-            data-js-theme-color="color-1"
-            class="js-theme-color-item color-1"
-          ></button>
+         
           <button
             type="button"
             data-js-theme-color="color-2"
             class="js-theme-color-item color-2"
           ></button>
-          <button
-            type="button"
-            data-js-theme-color="color-3"
-            class="js-theme-color-item color-3"
-          ></button>
-          <button
-            type="button"
-            data-js-theme-color="color-4"
-            class="js-theme-color-item color-4"
-          ></button>
-          <button
-            type="button"
-            data-js-theme-color="color-5"
-            class="js-theme-color-item color-5"
-          ></button>
-        </div>
-      </div>
-      <div class="style-switcher-item">
-        <div class="form-check form-switch">
-          <input
-            class="form-check-input js-dark-mode"
-            type="checkbox"
-            role="switch"
-            id="dark-mode"
-          />
-          <label class="form-check-label" for="dark-mode">Dark Mode</label>
         </div>
       </div>
       <div class="style-switcher-item">

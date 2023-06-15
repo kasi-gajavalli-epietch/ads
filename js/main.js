@@ -250,7 +250,7 @@ themeGlassEffect();
 /* why choose */
 
 const bannerText = document.getElementById("banner-text");
-const cards = document.querySelectorAll(".wcu-card");
+const cards = document.que(".wcu-card");
 
 // Options for the Intersection Observer
 const options = {

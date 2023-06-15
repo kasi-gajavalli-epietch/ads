@@ -88,6 +88,18 @@
                 </li>
 
                 <li class="menu-item"><a href="blog.html">blog</a></li>
+                
+
+                <li class="menu-item form-check form-switch">
+                  <input
+                    class="form-check-input js-dark-mode"
+                    type="checkbox"
+                    role="switch"
+                    id="dark-mode"
+                  />
+                  <label class="form-check-label" for="dark-mode"><i class="fas fa-moon" style="color:var(--main-color);"></i>
+                  </label>
+                </li>
 
                 <!--<li class="menu-item">
                   <div class="main-red-button-hover">
@@ -191,11 +203,12 @@
             <div class="col-md-6">
               <div class="contact-form box">
                 <h2 class="form-title text-center">Laisser un message</h2>
-                <form action="enquiry.php" id="contactform" method="post">
+                <form onsubmit="sendEmail(); reset(); return false;">
                   <div class="form-group">
                     <input
                       type="text"
                       name="name"
+                      id="name"
                       class="form-control"
                       placeholder="Nom"
                       required
@@ -205,6 +218,7 @@
                     <input
                       type="email"
                       name="email"
+                      id="email"
                       class="form-control"
                       placeholder="Email"
                       required
@@ -214,6 +228,7 @@
                     <input
                       name="phone"
                       type="number"
+                      id="phone"
                       class="form-control"
                       placeholder="Portable"
                       required
@@ -222,9 +237,9 @@
                   <div class="form-group">
                     <textarea
                       name="msg"
+                      id="message"
                       class="form-control"
                       placeholder="Message"
-                      id="textarea-sw"
                       required
                     ></textarea>
                   </div>
@@ -234,7 +249,7 @@
                     value="Submit"
                     class="btn btn-block btn-theme btn-form"
                   >
-                    envoyez
+                    Envoyez
                   </button>
                 </form>
               </div>
@@ -348,51 +363,20 @@
     <!-- main wrapper end -->
 
     <!-- style switcher start -->
-    <div class="style-switcher js-style-switcher">
+    <div class="style-switcher js-style-switcher" style="visibility: hidden;">
       <div class="style-switcher-toggler js-style-switcher-toggler">
         <i class="fas fa-cog"></i>
       </div>
-      <h3>Style Switcher</h3>
       <div class="style-switcher-item">
-        <p class="mb-2">Theme Colors</p>
+        <p class="mb-2"></p>
         <!-- theme colors -->
         <div class="theme-colors js-theme-colors">
-          <button
-            type="button"
-            data-js-theme-color="color-1"
-            class="js-theme-color-item color-1"
-          ></button>
+         
           <button
             type="button"
             data-js-theme-color="color-2"
             class="js-theme-color-item color-2"
           ></button>
-          <button
-            type="button"
-            data-js-theme-color="color-3"
-            class="js-theme-color-item color-3"
-          ></button>
-          <button
-            type="button"
-            data-js-theme-color="color-4"
-            class="js-theme-color-item color-4"
-          ></button>
-          <button
-            type="button"
-            data-js-theme-color="color-5"
-            class="js-theme-color-item color-5"
-          ></button>
-        </div>
-      </div>
-      <div class="style-switcher-item">
-        <div class="form-check form-switch">
-          <input
-            class="form-check-input js-dark-mode"
-            type="checkbox"
-            role="switch"
-            id="dark-mode"
-          />
-          <label class="form-check-label" for="dark-mode">Dark Mode</label>
         </div>
       </div>
       <div class="style-switcher-item">
@@ -411,6 +395,40 @@
     </div>
     <!-- style switcher end -->
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "kasi.gajavalli@gmail.com",
+          Password: "Vijayawada@1",
+          To: "kasi.srvs.91@gmail.com",
+          From: document.getElementById("email").value,
+          Subject: "New Contact Form Query",
+          Body:
+            "Name: " +
+            document.getElementById("name").value +
+            "<br> Email: " +
+            getElementById("email").value +
+            "<br> Phone: " +
+            getElementById("phone").value +
+            "<br> Message: " +
+            getElementById("message").value,
+        }).then((message) => alert("Message sent successfully"));
+      }
+    </script>
+
+    <!--<script>
+      function sendEmail() {
+        Email.send({
+          SecureToken: "9c37690c-7457-4736-a239-be4d9bfb7658", // Replace with your secure token
+          To: "kasi.srvs.91@gmail.com",
+          From: document.getElementById("email").value,
+          Subject: "New Contact Form Query",
+          Body: "And this is the body",
+        }).then((message) => alert(message));
+      }
+    </script>-->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
