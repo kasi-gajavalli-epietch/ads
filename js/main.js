@@ -237,15 +237,20 @@ function themeGlassEffect() {
       glassStyle.disabled = true;
     }
   }
-  if (localStorage.getItem("glass-effect") !== null) {
-    glass();
+
+  if (localStorage.getItem("glass-effect") === null) {
+    localStorage.setItem("glass-effect", "true"); // Set the default value to "true"
   }
+
+  glass(); // Call the glass() function to apply the initial setting
 
   if (!glassStyle.hasAttribute("disabled")) {
     glassEffectCheckbox.checked = true;
   }
 }
+
 themeGlassEffect();
+
 
 /* why choose */
 
