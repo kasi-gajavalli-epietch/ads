@@ -176,35 +176,17 @@ function themeGlassEffect() {
   const glassEffectCheckbox = document.querySelector(".js-glass-effect"),
     glassStyle = document.querySelector(".js-glass-style");
 
-  glassEffectCheckbox.addEventListener("click", function () {
-    if (this.checked) {
-      localStorage.setItem("glass-effect", "true");
-    } else {
-      localStorage.setItem("glass-effect", "false");
-    }
-    glass();
-  });
-
   function glass() {
-    if (localStorage.getItem("glass-effect") === "true") {
-      glassStyle.removeAttribute("disabled");
-    } else {
-      glassStyle.disabled = true;
-    }
+    glassStyle.removeAttribute("disabled");
   }
 
-  if (localStorage.getItem("glass-effect") === null) {
-    localStorage.setItem("glass-effect", "true"); // Set the default value to "true"
-  }
+  glass(); // Apply the glass theme by default
 
-  glass(); // Call the glass() function to apply the initial setting
-
-  if (!glassStyle.hasAttribute("disabled")) {
-    glassEffectCheckbox.checked = true;
-  }
+  glassEffectCheckbox.checked = true;
 }
 
 themeGlassEffect();
+
 
 /* why choose */
 
