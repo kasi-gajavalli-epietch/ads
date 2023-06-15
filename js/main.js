@@ -251,7 +251,6 @@ function themeGlassEffect() {
 
 themeGlassEffect();
 
-
 /* why choose */
 
 const bannerText = document.getElementById("banner-text");
@@ -282,5 +281,3 @@ const observer = new IntersectionObserver(handleIntersect, options);
 cards.forEach((card) => {
   observer.observe(card);
 });
-
-
