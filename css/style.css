@@ -1212,12 +1212,9 @@ textarea.form-control {
 .slider {
   background: white;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-  height: 200px;
-  margin: auto;
   overflow: hidden;
   position: relative;
   padding: 50px;
-
   --bs-gutter-x: 15px;
   max-width: 1140px;
 }
@@ -1245,14 +1242,13 @@ textarea.form-control {
 .slide-track {
   animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(300px * 8);
+  width: calc(300px * 10);
 }
 
 .slide {
-  height: 100px;
-  width: 300px;
   display: flex;
   align-items: center;
+  margin: 20px;
 }
 
 @keyframes scroll {
