@@ -123,12 +123,12 @@ function scrollToTop() {
 
 /* ------------------------------------ 
   Style Switcher
------------------------------------------*/ 
-function styleSwitcherToggle(){
+-----------------------------------------*/
+function styleSwitcherToggle() {
   const styleSwitcher = document.querySelector(".js-style-switcher"),
-  styleSwitcherToggler = document.querySelector(".js-style-switcher-toggler");
+    styleSwitcherToggler = document.querySelector(".js-style-switcher-toggler");
 
-  styleSwitcherToggler.addEventListener("click", function(){
+  styleSwitcherToggler.addEventListener("click", function () {
     styleSwitcher.classList.toggle("open");
     this.querySelector("i").classList.toggle("fa-times");
     this.querySelector("i").classList.toggle("fa-cog");
@@ -138,72 +138,85 @@ styleSwitcherToggle();
 
 /* -------------------------------------------
 theme colors
-----------------------------------------------*/ 
-function themeColors(){
- const colorStyle = document.querySelector(".js-color-style"),
- themeColorsContainer = document.querySelector(".js-theme-colors");
+----------------------------------------------*/
+function themeColors() {
+  const colorStyle = document.querySelector(".js-color-style"),
+    themeColorsContainer = document.querySelector(".js-theme-colors");
 
- themeColorsContainer.addEventListener("click", ({target}) => {
-   if(target.classList.contains("js-theme-color-item")){
-     localStorage.setItem("color", target.getAttribute("data-js-theme-color"));
-     setColor();
-   }
- });
+  themeColorsContainer.addEventListener("click", ({ target }) => {
+    if (target.classList.contains("js-theme-color-item")) {
+      localStorage.setItem("color", target.getAttribute("data-js-theme-color"));
+      setColor();
+    }
+  });
 
- function setColor(){
-   let path = colorStyle.getAttribute("href").split("/");
-   path = path.slice(0, path.length-1);
-   colorStyle.setAttribute("href", path.join("/") + "/" + localStorage.getItem("color") + ".css");
+  function setColor() {
+    let path = colorStyle.getAttribute("href").split("/");
+    path = path.slice(0, path.length - 1);
+    colorStyle.setAttribute(
+      "href",
+      path.join("/") + "/" + localStorage.getItem("color") + ".css"
+    );
 
-   if(document.querySelector(".js-theme-color-item.active")){
-     document.querySelector(".js-theme-color-item.active").classList.remove("active");
-   }
-   document.querySelector("[data-js-theme-color=" + localStorage.getItem("color") + "]").classList.add("active");
- }
+    if (document.querySelector(".js-theme-color-item.active")) {
+      document
+        .querySelector(".js-theme-color-item.active")
+        .classList.remove("active");
+    }
+    document
+      .querySelector(
+        "[data-js-theme-color=" + localStorage.getItem("color") + "]"
+      )
+      .classList.add("active");
+  }
 
- if(localStorage.getItem("color") !== null){
-   setColor();
- }  
- else{
-   const defaultColor = colorStyle.getAttribute("href").split("/").pop().split(".").shift();
-   document.querySelector("[data-js-theme-color=" + defaultColor + "]").classList.add("active");
- }
+  if (localStorage.getItem("color") !== null) {
+    setColor();
+  } else {
+    const defaultColor = colorStyle
+      .getAttribute("href")
+      .split("/")
+      .pop()
+      .split(".")
+      .shift();
+    document
+      .querySelector("[data-js-theme-color=" + defaultColor + "]")
+      .classList.add("active");
+  }
 }
 themeColors();
 
-/* theme light & dark mode */ 
-function themeLightDark(){
- const darkModeCheckbox = document.querySelector(".js-dark-mode");
+/* theme light & dark mode */
+function themeLightDark() {
+  const darkModeCheckbox = document.querySelector(".js-dark-mode");
 
- darkModeCheckbox.addEventListener("click", function() {
-  if(this.checked){
-    localStorage.setItem("theme-dark", "true");
+  darkModeCheckbox.addEventListener("click", function () {
+    if (this.checked) {
+      localStorage.setItem("theme-dark", "true");
+    } else {
+      localStorage.setItem("theme-dark", "false");
+    }
+    themeMode();
+  });
+
+  function themeMode() {
+    if (localStorage.getItem("theme-dark") === "false") {
+      document.body.classList.remove("t-dark");
+    } else {
+      document.body.classList.add("t-dark");
+    }
   }
-  else{
-   localStorage.setItem("theme-dark", "false");
+
+  if (localStorage.getItem("theme-dark") !== null) {
+    themeMode();
   }
-  themeMode();
- });
-
- function themeMode(){
-   if(localStorage.getItem("theme-dark") === "false"){
-     document.body.classList.remove("t-dark");
-   }
-   else{
-     document.body.classList.add("t-dark");
-   }
- }
-
- if(localStorage.getItem("theme-dark") !== null){
-   themeMode();
- }
- if(document.body.classList.contains("t-dark")){
-   darkModeCheckbox.checked = true;
- }
+  if (document.body.classList.contains("t-dark")) {
+    darkModeCheckbox.checked = true;
+  }
 }
 themeLightDark();
 
-/* theme glass effect */ 
+/* theme glass effect */
 function themeGlassEffect() {
   const glassEffectCheckbox = document.querySelector(".js-glass-effect");
   const glassStyle = document.querySelector(".js-glass-style");
@@ -232,7 +245,6 @@ function themeGlassEffect() {
 }
 
 themeGlassEffect();
-
 
 /* why choose */
 
@@ -264,33 +276,3 @@ const observer = new IntersectionObserver(handleIntersect, options);
 cards.forEach((card) => {
   observer.observe(card);
 });
-
-const form = document.querySelector("form"),
-  statusTxt = form.querySelector(".button-area span");
-form.onsubmit = (e) => {
-  e.preventDefault();
-
-  let xhr = new XMLHttpRequest();
-  xhr.open("POST", "https://ads-ebon.vercel.app/message.php", true);
-  xhr.onload = () => {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      let response = xhr.response;
-      if (
-        response.indexOf("required") != -1 ||
-        response.indexOf("valid") != -1 ||
-        response.indexOf("failed") != -1
-      ) {
-        statusTxt.style.color = "red";
-      } else {
-        form.reset();
-        setTimeout(() => {
-          statusTxt.style.display = "none";
-        }, 3000);
-      }
-      statusTxt.innerText = response;
-      form.classList.remove("disabled");
-    }
-  };
-  let formData = new FormData(form);
-  xhr.send(formData);
-};
