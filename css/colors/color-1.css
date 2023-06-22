@@ -13,6 +13,7 @@
     --decoration-bg-color-2: hsl(var(--hue-value-2), 100%, 70%);
 }*/
 
+/* color purple & red shade*/
 :root{
     --hue-value-1: 230;
     --hue-value-2: 27;

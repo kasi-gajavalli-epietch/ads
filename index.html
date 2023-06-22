@@ -19,6 +19,15 @@
       href="css/glass.css"
       disabled
     />
+    <link rel="stylesheet" href="css/animated.css" />
+    <link rel="stylesheet" href="css/owl.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="shortcut icon" href="img/logo.png" type="image/png" />
   </head>
   <body>
@@ -122,7 +131,11 @@
         <!-- bubble animation end -->
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-md-6">
+            <div
+              class="col-md-6 wow fadeInRight"
+              data-wow-duration="1s"
+              data-wow-delay="0.5s"
+            >
               <div class="banner-text" id="banner-text">
                 <h1
                   class="mb-3 text-capitalize text-center"
@@ -130,19 +143,58 @@
                 >
                   Expert en traitement de l'information!
                 </h1>
-                <div style="height: 80px;"></div>
+                <div style="height: 80px"></div>
                 <div class="text-center banner-btns">
-                  <a href="contact.html" class="btn btn-theme primary-btn">contact</a>
-                  
-                  <a href="about.html" class="btn btn-theme secondary-btn">découvrir</a>
+                  <a href="contact.html" class="btn btn-theme primary-btn"
+                    >contact</a
+                  >
+
+                  <a href="about.html" class="btn btn-theme secondary-btn"
+                    >découvrir</a
+                  >
                 </div>
               </div>
             </div>
             <div class="col-md-6 order-first order-md-last mb-5 mb-md-0">
-              <div class="banner-img">
-                <img src="img/logo.png" alt="banner img" />
+              <div
+                class="banner-img left-image wow bounceInUp"
+                data-wow-duration="1s"
+                data-wow-delay="0.3s"
+              >
+                <!--<img src="img/logo.png" alt="banner img" />
                 <div class="header-logo" style="text-align: center">
                   <a href="#"><span>ALCHIMIE </span>DATA SOLUTIONS</a>
+                </div>
+                <object data="banner-section.html" width="100%" height="500px" style="overflow:hidden;"></object>-->
+                <div
+                  class="hero-section-img-container"
+                  style="margin-left: 3rem"
+                >
+                  <div class="background-ele"></div>
+
+                  <img src="img/banner/olivier.png" class="hero-img" alt="" />
+                  <a href="https://www.youtube.com/channel/UCZWVRElRzDkG69NXvAuh8vg" class="hero-img-social-link"
+                    ><img src="img/banner/youtube.png" alt=""
+                  /></a>
+                  <a href="#" class="hero-img-social-link2"
+                    ><img src="img/banner/twitter.png" alt=""
+                  /></a>
+
+                  <a href="https://github.com/AlchimieDataSolutions/Academy" class="hero-img-social-link3"
+                    ><img src="img/banner/github.png" alt=""
+                  /></a>
+
+                  <a href="https://www.linkedin.com/company/alchimiedatasolutions/" class="hero-img-social-link4"
+                    ><img src="img/banner/linkden.png" alt=""
+                  /></a>
+
+                  <div class="hero-review">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p class="mb-4 text-justify">
+                      Rejoignez-nous pour trouver des solutions pour le développement de vos logiciels, la gestion des données et le déploiement.
+                      <i class="fa-solid fa-quote-right"></i>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -159,13 +211,25 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-8">
-              <div class="section-title text-center">
-                <p class="sub-title">Découvrez nos services</p>
+              <div
+                class="section-title text-center wow bounceIn"
+                data-wow-duration="1s"
+                data-wow-delay="0.2s"
+              >
+                <p class="sub-title">Nos services</p>
+                <h2 class="title">
+                  Découvrez ce que nous faisons &amp; <span>proposons</span> à
+                  nos <em>clients</em>
+                </h2>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-6 col-lg-6">
+            <div
+              class="col-md-6 col-lg-6 wow fadeInLeft"
+              data-wow-duration="1s"
+              data-wow-delay="0.5s"
+            >
               <div class="box card shadow">
                 <img src="img/app.svg" alt="" class="card-img-top" />
                 <div class="card-body">
@@ -211,7 +275,11 @@
             <div class="responsive-div"></div>
 
             <!--service 2-->
-            <div class="col-md-6 col-lg-6">
+            <div
+              class="col-md-6 col-lg-6 wow fadeInRight"
+              data-wow-duration="1s"
+              data-wow-delay="0.5s"
+            >
               <div class="box card shadow">
                 <img src="img/app.svg" alt="" class="card-img-top" />
                 <div class="card-body">
@@ -321,7 +389,7 @@
             </div>
           </div>
         </div>
-        <div class="slider box" style="margin: 30px;">
+        <div class="slider box" style="margin: 30px">
           <div class="slide-track">
             <div class="slide">
               <img src="img/terra_lacta.png" height="100" width="300" alt="" />
@@ -336,7 +404,12 @@
               <img src="img/SUEZ.png" height="100" width="300" alt="" />
             </div>
             <div class="slide">
-              <img src="img/blog/logo bluetek 2016.jpeg" height="100" width="300" alt="" />
+              <img
+                src="img/blog/logo bluetek 2016.jpeg"
+                height="100"
+                width="300"
+                alt=""
+              />
             </div>
             <div class="slide">
               <img src="img/terra_lacta.png" height="100" width="300" alt="" />
@@ -351,7 +424,12 @@
               <img src="img/SUEZ.png" height="100" width="300" alt="" />
             </div>
             <div class="slide">
-              <img src="img/blog/logo bluetek 2016.jpeg" height="100" width="300" alt="" />
+              <img
+                src="img/blog/logo bluetek 2016.jpeg"
+                height="100"
+                width="300"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -369,7 +447,7 @@
         <div class="footer-top">
           <div class="container">
             <div class="row">
-              <div class="col-sm-6 col-lg-3">
+              <div class="col-sm-6 col-lg-4">
                 <div class="footer-item">
                   <h3 class="footer-logo">
                     <span>Plan du site</span>
@@ -384,7 +462,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="col-sm-6 col-lg-3">
+              <div class="col-sm-6 col-lg-4">
                 <div class="footer-item">
                   <h3>Légal</h3>
                   <ul>
@@ -398,32 +476,7 @@
                 </div>
               </div>
 
-              <div class="col-sm-6 col-lg-3">
-                <div class="footer-item">
-                  <h3>Nous suivre</h3>
-                  <ul>
-                    <li>
-                      <a href="https://github.com/AlchimieDataSolutions/Academy"
-                        ><i class="fab fa-github social-icon"></i>Github</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.youtube.com/channel/UCZWVRElRzDkG69NXvAuh8vg"
-                        ><i class="fab fa-youtube social-icon"></i> youtube</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/company/alchimiedatasolutions/"
-                        ><i class="fab fa-linkedin social-icon"></i> linkedin</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-sm-6 col-lg-3">
+              <div class="col-sm-6 col-lg-4">
                 <div class="footer-item">
                   <h3>contact</h3>
                   <ul>
@@ -439,6 +492,42 @@
                       >
                     </li>
                   </ul>
+                  <div class="social-btns" style="margin-top: 20px">
+                    <a href="https://github.com/AlchimieDataSolutions/Academy">
+                      <span class="sb-box">
+                        <span class="face front">
+                          <i class="fab fa-github social-icon"></i>
+                        </span>
+                        <span class="face bottom">
+                          <i class="fab fa-github social-icon"></i>
+                        </span>
+                      </span>
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/company/alchimiedatasolutions/"
+                    >
+                      <span class="sb-box">
+                        <span class="face front">
+                          <i class="fab fa-linkedin social-icon"></i>
+                        </span>
+                        <span class="face bottom">
+                          <i class="fab fa-linkedin social-icon"></i>
+                        </span>
+                      </span>
+                    </a>
+                    <a
+                      href="https://www.youtube.com/channel/UCZWVRElRzDkG69NXvAuh8vg"
+                    >
+                      <span class="sb-box">
+                        <span class="face front">
+                          <i class="fab fa-youtube"></i>
+                        </span>
+                        <span class="face bottom">
+                          <i class="fab fa-youtube"></i>
+                        </span>
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -520,8 +609,22 @@
     </div>
     <!-- style switcher end -->
 
-    <script src="js/jquery.min.js"></script>
+    <!-- Add jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Add animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Add Wow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>
