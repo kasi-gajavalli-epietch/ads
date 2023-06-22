@@ -1437,98 +1437,6 @@ textarea.form-control {
     }
   }
 
-  /*.timeline {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.timeline-item {
-  display: inline-block;
-  position: relative;
-  margin: 10px;
-  text-align: center;
-}
-
-.timeline-year {
-  position: relative;
-  z-index: 1;
-  font-size: 18px;
-  font-weight: bold;
-  color: var(--WHITE);
-  font-weight: 500;
-  background-color: var(--main-color);
-  padding: 10px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  box-sizing: border-box;
-  width: 80px;
-  height: 80px;
-}
-
-.timeline-content {
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-.timeline-title {
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-.timeline-description {
-  font-size: 14px;
-}
-
-.timeline-connector {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 100%;
-  border-left: 2px solid #dd4949;
-  transform: translateX(-50%);
-}
-
-.timeline-item:first-child .timeline-connector {
-  display: none;
-}
-
-.timeline-item:last-child .timeline-connector {
-  height: 50%;
-}
-
-.timeline-item:hover .timeline-year {
-  animation: shine 1s infinite;
-}
-
-@keyframes shine {
-  0% {
-    box-shadow: 0 0 0 0 var(--main-color);
-  }
-  50% {
-    box-shadow: 0 0 0 10px rgba(249, 213, 110, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(249, 213, 110, 0);
-  }
-}
-
-@media (max-width: 768px) {
-  .timeline {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .timeline-item {
-    margin: 20px 0;
-  }
-}*/
-
 /* ---------------------------- 
   =nos dirigeants
   ------------------------------*/
@@ -2044,4 +1952,210 @@ textarea.form-control {
   position: relative;
   z-index: 10 !important; /* Updated z-index value */
   text-align: center;
+}
+
+/*team ui card */
+
+.team-container
+{
+  position: relative;
+  width: 600px;
+  height: 600px;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+}
+
+.team-container .icon
+{
+  position: relative;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.team-container .icon .imgBx
+{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transition: 0.5s;
+  border: 1px solid  var(--white);
+  box-shadow: 0 0 0 2px var(--blue-light),0 0 0 3px var(--WHITE);
+  transform: rotate(calc(360deg/10 * var(--i)));
+  transform-origin: 340px;
+  z-index: 100;
+  overflow: hidden;
+}
+.team-container .icon .imgBx.active
+{
+  box-shadow: 0 0 0 6px var(--main-color);
+}
+.team-container .icon .imgBx img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotate(calc(-360deg/10 * var(--i)));
+  transition: 0.5s;
+  filter: grayscale(1);
+}
+.team-container .icon .imgBx.active img
+{
+  filter: grayscale(0);
+}
+.team-content
+{
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.team-content::before 
+{
+  content: '';
+  position: absolute;
+  inset: 60px;
+  border: 4px solid transparent;
+  border-left: 4px solid #2196f3;
+  border-right: 4px solid #fff;
+  pointer-events: none;
+  border-radius: 50%;
+  animation: animate 5s linear infinite;
+  z-index: 1;
+}
+@keyframes animate 
+{
+  0% 
+  {
+    rotate: 0deg;
+  }
+  100% 
+  {
+    rotate: 360deg;
+  }
+}
+.team-content::after 
+{
+  content: '';
+  position: absolute;
+  inset: 120px;
+  border: 4px solid transparent;
+  border-left: 4px solid #ff1d50;
+  border-right: 4px solid var(--orange-light);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: animateTwo 2.5s linear infinite;
+  z-index: 1;
+}
+@keyframes animateTwo 
+{
+  0% 
+  {
+    rotate: 360deg;
+  }
+  100% 
+  {
+    rotate: 0deg;
+  }
+}
+.contentBx
+{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  transform: scale(0);
+  opacity: 0;
+}
+.contentBx.active
+{
+  transform: scale(1);
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+.contentBx .team-card 
+{
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+}
+.contentBx .team-card .imbBx 
+{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.contentBx .team-card .imbBx img 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contentBx .team-card .textBx
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contentBx .team-card .textBx h2 
+{
+  position: relative;
+  font-size: 1.25em;
+  font-weight: 600;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.contentBx .team-card .textBx h2 span 
+{
+  font-size: 0.65em;
+  color: var(--main-color);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+.contentBx .team-card .textBx .sci 
+{
+  position: relative;
+  display: flex;
+  gap: 7px;
+  margin-top: 10px;
+}
+.contentBx .team-card .textBx .sci li 
+{
+  list-style: none;
+}
+.contentBx .team-card .textBx .sci li a 
+{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #444;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.contentBx .team-card .textBx .sci li a:hover 
+{
+  background: #2196f3;
 }

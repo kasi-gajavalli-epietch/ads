@@ -234,3 +234,104 @@
     margin: 8px 15px;
   }
 }
+
+/* team ui */
+
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+  .team-container {
+    width: 400px;
+    height: 400px;
+  }
+  .team-container .icon .imgBx {
+    width: 60px;
+    height: 60px;
+    transform-origin: 240px;
+  }
+  .team-content::before {
+    inset: 40px;
+  }
+  .team-content::after {
+    inset: 80px;
+  }
+  .contentBx .team-card {
+    gap: 10px;
+  }
+
+  .contentBx .team-card .imgBx {
+    width: 120px;
+    height: 120px;
+  }
+
+  .contentBx .team-card .textBx h2 {
+    font-size: 1em;
+  }
+
+  .contentBx .team-card .textBx h2 span {
+    font-size: 0.55em;
+  }
+
+  .contentBx .team-card .textBx .sci li a {
+    width: 25px;
+    height: 25px;
+  }
+  .team-ui-card {
+    display: none;
+  }
+}
+
+/* Responsive styles for phones */
+@media (max-width: 576px) {
+  .team-container {
+    width: 300px;
+    height: 300px;
+  }
+  .team-container .icon .imgBx {
+    width: 40px;
+    height: 40px;
+    transform-origin: 160px;
+  }
+  .team-content::before {
+    inset: 40px;
+  }
+  .team-content::after {
+    inset: 40px;
+  }
+  .contentBx .team-card {
+    gap: 5px;
+  }
+
+  .contentBx .team-card .imgBx {
+    width: 90px;
+    height: 90px;
+  }
+
+  .contentBx .team-card .textBx h2 {
+    font-size: 0.9em;
+  }
+
+  .contentBx .team-card .textBx h2 span {
+    font-size: 0.45em;
+  }
+
+  .contentBx .team-card .textBx .sci li a {
+    width: 20px;
+    height: 20px;
+  }
+  .team-ui-card {
+    display: none;
+  }
+  .sci {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  /* Tablets and below */
+  .team-ui-card {
+    display: none;
+  }
+  .sci{
+    display: none;
+  }
+}

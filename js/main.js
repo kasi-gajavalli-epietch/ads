@@ -279,7 +279,7 @@ cards.forEach((card) => {
 
 
 /*carousel*/
-let slideIndex = 0;
+/*let slideIndex = 0;
 showSlides();
 
 function showSlides() {
@@ -300,4 +300,21 @@ function showSlides() {
   dots[slideIndex - 1].className += " active";
 
   setTimeout(showSlides, 5000); 
-}
+}*/
+
+var	imgBx = document.querySelectorAll('.imgBx');
+		var	contentBx = document.querySelectorAll('.contentBx');
+		
+		for (var i = 0; i < imgBx.length; i++) {
+			imgBx[i].addEventListener('mouseover', function() {
+				for (var i = 0; i < contentBx.length; i++) {
+					contentBx[i].className = 'contentBx';
+				}
+				document.getElementById(this.dataset.id).className = 'contentBx active';
+
+				for (var i = 0; i < imgBx.length; i++) {
+					imgBx[i].className = 'imgBx';
+				}
+				this.className = 'imgBx active';
+			});
+		}
