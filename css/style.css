@@ -2028,19 +2028,20 @@ textarea.form-control {
   display: block;
 }
 .dot {
-  height: 10px;
-  width: 10px;
+  height: 20px !important;
+  width: 20px !important;
   background-color: #bbb;
   border-radius: 50%;
   margin: 0 5px;
   transition: background-color 0.6s ease;
+  margin: 10px;
 }
 .dot.active {
-  background-color: var(--main-color);
+  background-color: #717171;
+  margin: 10px;
 }
-
 .dots-container {
   position: relative;
-  z-index: 10; /* Updated z-index value */
+  z-index: 10 !important; /* Updated z-index value */
   text-align: center;
 }
