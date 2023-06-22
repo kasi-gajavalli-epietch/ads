@@ -1721,16 +1721,19 @@ textarea.form-control {
   transform: translateY(50%) rotateX(-90deg);
 }
 
+/* ---------------------------- 
+  =banner landing image
+  ------------------------------*/
 
 .hero-section-img-container {
   width: 30rem;
   height: 90%;
-  position: absolute;
-  right: 10vw;
+  position: relative;
   bottom: 0;
   display: flex;
   justify-content: center;
 }
+
 
 .hero-img {
   width: 100%;
@@ -1831,7 +1834,7 @@ textarea.form-control {
   padding: 1.5rem;
   border-radius: 0.5rem;
   position: absolute;
-  bottom: 10%;
+  bottom: 0%;
   right: -5%;
   background-color: hsl(0, 0%, 140%);;
   box-sizing: 0 0.5rem 4rem var(--social-link-shadow-color);
@@ -1850,4 +1853,164 @@ textarea.form-control {
   line-height: 1.75rem;
 }
 
+@media (max-width: 991px) {
+  .banner-section {
+    padding: 60px 0;
+    min-height: 500px;
+  }
+
+  .banner-text h1 {
+    font-size: 35px;
+  }
+
+  .hero-section-img-container {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    right: 0;
+    bottom: 2rem;
+  }
+
+  .hero-review {
+    padding: 1rem;
+  border-radius: 0.5rem;
+  
+  bottom: 0%;
+  right: -5%;
+  background-color: hsl(0, 0%, 140%);;
+  box-sizing: 0 0.5rem 4rem var(--social-link-shadow-color);
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  }
+
+  .hero-section-img-container::before,
+.hero-section-img-container::after,
+.background-ele {
+  width: 20rem;
+  height: 20rem;
+}
+
+.hero-section-img-container::before {
+  width: 19.5rem;
+  height: 19.5rem;
+  margin-left: 0px !important;
+}
+
+.background-ele {
+  top: 37%;
+  left: 53%;
+  width: 15rem;
+  height: 15rem;
+}
+
+.hero-img-social-link {
+  top: 17%;
+  right: 2%;
+  transform: scale(0.75);
+}
+
+.hero-img-social-link2 {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  transform: scale(0.75);
+}
+
+.hero-img-social-link3 {
+  position: absolute;
+  top: 40%;
+  right: 3%;
+  transform: scale(0.75);
+}
+
+.hero-img-social-link4 {
+  position: absolute;
+  top: 55%;
+  left: 10%;
+  background-color: none;
+  transform: scale(0.75);
+}
+}
+
+@media (max-width: 768px) {
+  .banner-section {
+    padding: 60px 0;
+    min-height: 500px;
+  }
+
+  .banner-text h1 {
+    font-size: 35px;
+  }
+
+  .hero-section-img-container {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    right: 0;
+    bottom: 2rem;
+  }
+
+  .hero-review {
+    padding: 1rem;
+  border-radius: 0.5rem;
+  
+  bottom: 0%;
+  right: -5%;
+  background-color: hsl(0, 0%, 140%);;
+  box-sizing: 0 0.5rem 4rem var(--social-link-shadow-color);
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  }
+
+  .hero-section-img-container::before,
+.hero-section-img-container::after,
+.background-ele {
+  width: 20rem;
+  height: 20rem;
+}
+
+.hero-section-img-container::before {
+  width: 19.5rem;
+  height: 19.5rem;
+  margin-left: 0px !important;
+}
+
+.background-ele {
+  top: 37%;
+  left: 53%;
+  width: 15rem;
+  height: 15rem;
+}
+
+.hero-img-social-link {
+  top: 17%;
+  right: 2%;
+  transform: scale(0.75);
+}
+
+.hero-img-social-link2 {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  transform: scale(0.75);
+}
+
+.hero-img-social-link3 {
+  position: absolute;
+  top: 40%;
+  right: 3%;
+  transform: scale(0.75);
+}
+
+.hero-img-social-link4 {
+  position: absolute;
+  top: 55%;
+  left: 10%;
+  background-color: none;
+  transform: scale(0.75);
+}
+
+}
 
