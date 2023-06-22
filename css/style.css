@@ -387,6 +387,7 @@ textarea.form-control {
   --------------------------*/
 .breadcrumb-nav {
   padding: 10px 0;
+  background-color: transparent !important;
 }
 .breadcrumb-nav .breadcrumb-item {
   font-size: 14px;
@@ -734,6 +735,37 @@ textarea.form-control {
 .banner-section .circular-img-circle {
   background-color: var(--red-light);
 }
+
+.banner-btns{
+  display: flex;
+  justify-content: center;
+}
+
+.secondary-btn{
+  border-radius: 2rem ;
+  background-color: transparent;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  margin-left: 1rem;
+}
+
+.primary-btn{
+  border-radius: 2rem ;
+  margin-right: 1rem;
+}
+
+@media (min-width: 992px) {
+  .banner-btns{
+    margin: 0px !important;
+  }
+}
+@media(max-width: 991px){
+  .banner-btns{
+    margin: 0px !important;
+  }
+
+}
+
 /* -------------------------- 
   22. =fun facts section 
   ----------------------------*/
@@ -1641,97 +1673,4 @@ textarea.form-control {
   .diri-cards {
     display: block;
   }
-}
-
-/* ---------------------------- 
-  =carousel
-  ------------------------------*/
-
-
-.carousel {
-	padding: 0 0px;
-}
-.carousel .carousel-item {
-	font-size: 14px;
-	text-align: center;
-	overflow: hidden;
-	min-height: 290px;
-}
-.carousel .carousel-item .img-box {
-	width: 100%;
-	height: 470px;
-	margin: 0 auto;
-	padding: 5px;
-	border: none;
-}
-.carousel .img-box img {
-	width: 80%;
-	height: 450px;
-	display: block;
-  margin: 0 auto;
-}
-.carousel-control-prev, .carousel-control-next {
-	width: 0px !important;
-	margin-top: -20px;
-	top: 50%;
-	background: none;
-}
-.carousel-control-prev i, .carousel-control-next i {
-	font-size: 68px;
-	line-height: 42px;
-	position: absolute;
-	display: inline-block;
-	color: var(--main-color);
-	text-shadow: var(--white);
-}
-.carousel-indicators {
-	bottom: 0px !important;
-  margin: -20px;
-}
-.carousel-indicators li, .carousel-indicators li.active {
-	width: 12px;
-	height: 12px;
-  bottom: 0px;
-	margin: 1px 3px;
-	border-radius: 50%;
-	border: none;
-  color: var(--main-color);
-}
-.carousel-indicators li {	
-	background: #999 !important;
-	border-color: transparent;
-  width: 12px !important;
-	height: 12px !important;
-  border-radius: 50%;
-  margin: 1px 3px;
-	border-radius: 50%;
-	border: none;
-  border-top: 0px !important;
-  border-bottom: 0px !important;
-}
-.carousel-indicators li.active {	
-	background: var(--main-color) !important;		
-	box-shadow: inset 0 2px 1px var(--main-color);
-}
-
-@media (max-width: 767px) {
-  .carousel .img-box img {
-    width: 90%;
-    height: 210px;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .carousel .carousel-item .img-box {
-    width: 100%;
-    height: 220px;
-    margin: 0 auto;
-    padding: 5px;
-    border: none;
-  }
-
-  .carousel-indicators{
-    visibility: hidden;
-  }
-  
 }
