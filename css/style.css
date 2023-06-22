@@ -345,6 +345,12 @@ textarea.form-control {
   height: 120px;
   resize: none;
 }
+
+.form-switch .form-check-input{
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+}
+
 /* -----------------------
   13. =video modal 
   ------------------------ */
@@ -1877,7 +1883,6 @@ textarea.form-control {
   
   bottom: 0%;
   right: -5%;
-  background-color: hsl(0, 0%, 140%);;
   box-sizing: 0 0.5rem 4rem var(--social-link-shadow-color);
   width: 100%;
   z-index: 3;
