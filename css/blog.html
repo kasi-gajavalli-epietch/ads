@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ADS-Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      class="js-color-style"
+      href="css/colors/color-1.css"
+    />
+    <link
+      rel="stylesheet"
+      class="js-glass-style"
+      href="css/glass.css"
+      disabled
+    />
+    <link rel="shortcut icon" href="img/logo.png" type="image/png" />
+  </head>
+  <body>
+    <!-- page loader start -->
+    <div class="page-loader js-page-loader">
+      <div></div>
+    </div>
+    <!-- page loader end -->
+
+    <!-- main wrapper start -->
+    <div class="main-wrapper">
+      <!-- header start -->
+      <header class="header">
+        <div class="container">
+          <div
+            class="header-main d-flex justify-content-between align-items-center"
+          >
+            <div class="header-logo">
+              <a href="index.html">
+                <img
+                  src="./img/logo.png"
+                  alt="Logo"
+                  width="50"
+                  height="50"
+                  style="background-color: transparent"
+                />
+              </a>
+            </div>
+            <button
+              type="button"
+              class="header-hamburger-btn js-header-menu-toggler"
+            >
+              <span></span>
+            </button>
+            <div class="header-backdrop js-header-backdrop"></div>
+            <nav class="header-menu js-header-menu">
+              <button
+                type="button"
+                class="header-close-btn js-header-menu-toggler"
+              >
+                <i class="fas fa-times"></i>
+              </button>
+              <ul class="menu">
+                <li class="menu-item"><a href="index.html">Accueil</a></li>
+                <li class="menu-item"><a href="services.html">services</a></li>
+                <li class="menu-item"><a href="products.html">produits</a></li>
+
+                <li class="menu-item">
+                  <a href="about.html">qui somme nous?</a>
+                </li>
+
+                <li class="menu-item">
+                  <a href="join.html">Nous rejoindre</a>
+                </li>
+
+                <li class="menu-item"><a href="blog.html">blog</a></li>
+
+                <li class="menu-item form-check form-switch">
+                  <input
+                    class="form-check-input js-dark-mode"
+                    type="checkbox"
+                    role="switch"
+                    id="dark-mode"
+                  />
+                  <label class="form-check-label" for="dark-mode"
+                    ><i
+                      class="fas fa-moon"
+                      style="color: var(--main-color)"
+                    ></i>
+                  </label>
+                </li>
+
+                <!--<li class="menu-item">
+                  <div class="main-red-button-hover">
+                    <a href="contact.html">contact</a>
+                  </div>
+                </li>-->
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!-- header end -->
+
+      <!-- breadcrumb start -->
+      <div class="breadcrumb-nav">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Blog</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <!-- breadcrumb end -->
+
+      <!-- banner section start -->
+      <section class="d-flex align-items-center position-relative">
+        <!-- bubble animation start -->
+        <div class="bubble-animation">
+          <div class="bubble-animation-item"></div>
+          <div class="bubble-animation-item"></div>
+          <div class="bubble-animation-item"></div>
+          <div class="bubble-animation-item"></div>
+          <div class="bubble-animation-item"></div>
+          <div class="bubble-animation-item"></div>
+          <div class="bubble-animation-item"></div>
+          <div class="bubble-animation-item"></div>
+          <div class="bubble-animation-item"></div>
+        </div>
+        <!-- bubble animation end -->
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <div class="banner-text">
+                <h1 class="mb-3 text-capitalize">Le blog</h1>
+                <p class="mb-4">
+                  Découvrez les articles sur nos services, nos succès et plus
+                  encore
+                </p>
+                <a href="contact.html" class="btn btn-theme">contact</a>
+              </div>
+            </div>
+            <div class="col-md-6 order-first order-md-last mb-5 mb-md-0">
+              <div class="banner-img">
+                <img src="img/logo.png" alt="banner img" />
+                <div class="header-logo" style="text-align: center">
+                  <a href="#"><span>ALCHIMIE </span>DATA SOLUTIONS</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- banner section end -->
+
+      <!-- articles start -->
+      <section class="course-details section-padding">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="section-title text-center">
+                <h2 class="title">Articles</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row section padding">
+            <div class="col-md-4 col-lg-4">
+              <div class="course-sidebar box" style="padding: 0px !important">
+                <div class="card-body">
+                  <div style="background-color: var(--main-color); height: 50%">
+                    <img src="img/blog/solainn.png" class="card-img-top" />
+                  </div>
+                  <hr class="mx-auto w-75" />
+                  <p style="text-align: justify; font-size: 14px">
+                    SOLAINN® a lancé sa nouvelle version : la marketplace des
+                    solutions numériques de France. Arriverez-vous à trouver sur
+                    quelle branche se trouve Alchimie Data Solutions?... 
+                    <br /><br />
+                    <i
+                      class="fas fa-clock"
+                      style="color: var(--main-color)"
+                    ></i>
+                    22/11/2022 11:14:30
+                  </p>
+                  <br />
+                  <div class="text-center">
+                    <a href="solanin.html" class="btn btn-theme"
+                      >En savoir plus</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-lg-4">
+              <div class="course-sidebar box" style="padding: 0px !important">
+                <div class="card-body">
+                  <div style="background-color: var(--main-color); height: 50%">
+                    <img src="img/blog/trophee.png" class="card-img-top" />
+                  </div>
+                  <hr class="mx-auto w-75" />
+                  <p style="text-align: justify; font-size: 14px">
+                    En plus de nos services, nous avons aussi créé notre propre
+                    ETL utilisable en mode SaaS et OnPremise pour répondre à
+                    certains besoins...
+                    <br /><br />
+                    <i
+                      class="fas fa-clock"
+                      style="color: var(--main-color)"
+                    ></i>
+                    1 Nov. 2022
+                  </p>
+                  <br />
+                  <div class="text-center">
+                    <a href="IMT-trophee.html" class="btn btn-theme"
+                      >En savoir plus</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-lg-4">
+              <div class="course-sidebar box" style="padding: 0px !important">
+                <div class="card-body">
+                  <div style="background-color: var(--main-color); height: 50%">
+                    <img
+                      src="img/blog/logo bluetek 2016.jpeg"
+                      class="card-img-top"
+                    />
+                  </div>
+                  <hr class="mx-auto w-75" />
+                  <p style="text-align: justify; font-size: 14px">
+                    Bluetek, le spécialiste français des solutions pour les
+                    toitures et les façades, a récemment inauguré son projet
+                    ambitieux baptisé "Labo"...
+                    <br /><br />
+                    <i
+                      class="fas fa-clock"
+                      style="color: var(--main-color)"
+                    ></i>
+                    22/11/2022 11:14:30
+                  </p>
+                  <br />
+                  <div class="text-center">
+                    <a href="bluetek.html" class="btn btn-theme"
+                      >En savoir plus</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding"></section>
+
+      <!-- articles end -->
+
+      <!--Scroll To Top-->
+      <button onclick="scrollToTop()" id="topButton" title="Go to top">
+        &#8679;
+      </button>
+
+      <!-- footer start -->
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-lg-4">
+                <div class="footer-item">
+                  <h3 class="footer-logo">
+                    <span>Plan du site</span>
+                  </h3>
+                  <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="products.html">Produit</a></li>
+                    <li><a href="services.html">Service</a></li>
+                    <li><a href="about.html">Qui sommes nous ?</a></li>
+                    <li><a href="join.html">Nous Rejoindre</a></li>
+                    <li><a href="blog.html">Le blog</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="footer-item">
+                  <h3>Légal</h3>
+                  <ul>
+                    <li>
+                      <a href="mention.html">Mention Légal</a>
+                    </li>
+                    <li>
+                      <a href="general.html">Condition générale de vente</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <div class="footer-item">
+                  <h3>contact</h3>
+                  <ul>
+                    <li>
+                      <a href="mailto:contact@alchimiedatasolutions.com"
+                        ><i class="far fa-envelope"></i
+                        >contact@alchimiedatasolutions.com</a
+                      >
+                    </li>
+                    <li>
+                      <a href="tel:+33186650350"
+                        ><i class="fas fa-phone"></i> +33 1 86 65 03 50</a
+                      >
+                    </li>
+                  </ul>
+                  <div class="social-btns" style="margin-top: 20px">
+                    <a href="https://github.com/AlchimieDataSolutions/Academy">
+                      <span class="sb-box">
+                        <span class="face front">
+                          <i class="fab fa-github social-icon"></i>
+                        </span>
+                        <span class="face bottom">
+                          <i class="fab fa-github social-icon"></i>
+                        </span>
+                      </span>
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/company/alchimiedatasolutions/"
+                    >
+                      <span class="sb-box">
+                        <span class="face front">
+                          <i class="fab fa-linkedin social-icon"></i>
+                        </span>
+                        <span class="face bottom">
+                          <i class="fab fa-linkedin social-icon"></i>
+                        </span>
+                      </span>
+                    </a>
+                    <a
+                      href="https://www.youtube.com/channel/UCZWVRElRzDkG69NXvAuh8vg"
+                    >
+                      <span class="sb-box">
+                        <span class="face front">
+                          <i class="fab fa-youtube"></i>
+                        </span>
+                        <span class="face bottom">
+                          <i class="fab fa-youtube"></i>
+                        </span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <p class="m-0 py-4 text-center">
+              Copyright &copy;2023 Alchimie Data Solutions
+            </p>
+          </div>
+        </div>
+      </footer>
+      <!-- footer end -->
+    </div>
+    <!-- main wrapper end -->
+
+    <!-- style switcher start -->
+    <div class="style-switcher js-style-switcher" style="visibility: hidden">
+      <div class="style-switcher-toggler js-style-switcher-toggler">
+        <i class="fas fa-cog"></i>
+      </div>
+      <h3>Style Switcher</h3>
+      <div class="style-switcher-item">
+        <p class="mb-2">Theme Colors</p>
+        <!-- theme colors -->
+        <div class="theme-colors js-theme-colors">
+          <button
+            type="button"
+            data-js-theme-color="color-1"
+            class="js-theme-color-item color-1"
+          ></button>
+          <button
+            type="button"
+            data-js-theme-color="color-2"
+            class="js-theme-color-item color-2"
+          ></button>
+          <button
+            type="button"
+            data-js-theme-color="color-3"
+            class="js-theme-color-item color-3"
+          ></button>
+          <button
+            type="button"
+            data-js-theme-color="color-4"
+            class="js-theme-color-item color-4"
+          ></button>
+          <button
+            type="button"
+            data-js-theme-color="color-5"
+            class="js-theme-color-item color-5"
+          ></button>
+        </div>
+      </div>
+      <div class="style-switcher-item">
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input js-dark-mode"
+            type="checkbox"
+            role="switch"
+            id="dark-mode"
+          />
+          <label class="form-check-label" for="dark-mode">Dark Mode</label>
+        </div>
+      </div>
+      <div class="style-switcher-item">
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input js-glass-effect"
+            type="checkbox"
+            role="switch"
+            id="glass-effect"
+          />
+          <label class="form-check-label" for="glass-effect"
+            >Glass Effect</label
+          >
+        </div>
+      </div>
+    </div>
+    <!-- style switcher end -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
