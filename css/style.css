@@ -730,6 +730,14 @@ textarea.form-control {
   padding: 80px 0;
   min-height: 680px;
 }
+
+.banner-section {
+  background: url(../img/shape-12.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
 .banner-text h2 {
   font-size: 20px;
   color: var(--main-color);
