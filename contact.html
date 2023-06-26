@@ -98,6 +98,22 @@
       </header>
       <!-- header end -->
 
+
+      <!-- breadcrumb start -->
+      <div class="breadcrumb-nav">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                contact
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <!-- breadcrumb end -->
+
       <!-- banner section start -->
       <section
         class="banner-section d-flex align-items-center position-relative"
@@ -117,7 +133,9 @@
         <!-- bubble animation end -->
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-md-6">
+            <div class="col-md-6 wow fadeInLeft"
+            data-wow-duration="1s"
+            data-wow-delay="0.5s">
               <div class="banner-text">
                 <h1 class="mb-3 text-capitalize">
                   Exploitez vos données avec plus de facilité !
@@ -129,7 +147,9 @@
                 <a href="contact.html" class="btn btn-theme">contact</a>
               </div>
             </div>
-            <div class="col-md-6 order-first order-md-last mb-5 mb-md-0">
+            <div class="col-md-6 order-first order-md-last mb-5 mb-md-0 wow fadeInRight"
+            data-wow-duration="1s"
+            data-wow-delay="0.3s">
               <div class="banner-img">
                 <img src="img/contact/contactus.svg" alt="banner img" />
                 <div class="header-logo" style="text-align: center">
@@ -142,26 +162,13 @@
       </section>
       <!-- banner section end -->
 
-      <!-- breadcrumb start -->
-      <div class="breadcrumb-nav">
-        <div class="container">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb mb-0">
-              <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
-              <li class="breadcrumb-item active" aria-current="page">
-                contact
-              </li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-      <!-- breadcrumb end -->
-
       <!-- contact section start -->
       <section class="contact-section section-padding">
         <div class="container">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 wow fadeInLeft"
+            data-wow-duration="1s"
+            data-wow-delay="0.3s">
               <div class="section-title">
                 <p class="sub-title">Écrivez-nous</p>
               </div>
@@ -185,7 +192,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 wow bounceInUp"
+            data-wow-duration="1s"
+            data-wow-delay="0.3s">
               <div class="contact-form box">
                 <h2 class="form-title text-center">Laisser un message</h2>
                 <form onsubmit="sendEmail(); reset(); return false;">
